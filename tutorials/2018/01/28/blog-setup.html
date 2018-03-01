@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>
+    Personal Blog Setup - Sean Chen
+    
+  </title>
+
+  <meta name="description" content="Note: This blog post assumes basic knowledge of Github, HTML/CSS, and how to run UNIX commands using Terminal on a Mac. Miscellaneous links to learn about th...">
+
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="/assets/vendor/font-awesome/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/tutorials/2018/01/28/blog-setup.html">
+  <link rel="alternate" type="application/rss+xml" title="Sean Chen" href="/feed.xml">
+
+</head>
+
+
+  <body>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="/">SC</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/posts">Posts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+    <!-- Page Header -->
+
+<header class="masthead" style="background-image: url('/resources/got-castle.jpg')">
+
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="post-heading">
+          <h1>Personal Blog Setup</h1>
+          
+          <h2 class="subheading">How I set up this blog using Github pages and Jekyll</h2>
+          
+          <span class="meta">Posted by Sean Chen
+            on January 28, 2018</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+
+      <p>Note: This blog post assumes basic knowledge of Github, HTML/CSS, and how to run UNIX commands using Terminal on a Mac. Miscellaneous links to learn about the assumed knowledge are listed below the blog.</p>
+
+<p>Every time that I would think about starting a blog, I would fall into the endless rabbit hole of deciding on which framework to use and how I wanted the blog to eventually look. Every time I searched for inspiration online, I would end up looking at templates and would waste so much time that I never actually created anything. This blog post is meant to help those that are in the same boat that I was in. Hopefully I can help you guys get a good start on a blog with a simple look that can be customized to your needs.</p>
+
+<p>To create your personal website, we are going to be using Github Pages, github’s website hosting platform, and Jekyll, a static site generator. We are also going to use a template that was created by Start Bootstrap to get a clean looking starter blog that you can customize.</p>
+
+<p><strong>Creating the Jekyll Blog</strong></p>
+
+<p>To start off, you want to make sure that you have the dependencies for jekyll installed (a simple google search should return how-tos for each):</p>
+<ol>
+  <li>Ruby version 2.2.5 or above, including all development headers (ruby installation can be checked by running ruby -v, development headers can be checked on Ubuntu by running apt list –installed  ruby-dev)</li>
+  <li>RubyGems (which you can check by running gem -v)</li>
+  <li>GCC and Make (in case your system doesn’t have them installed, which you can check by running gcc -v,g++ -v and make -v in your system’s command line interface)</li>
+</ol>
+
+<p>Next you want to install jekyll by running the following command on your command line:</p>
+
+<p><code class="highlighter-rouge">gem install jekyll</code></p>
+
+<p>This will pull in the necessary dependencies and extensions for jekyll. Once you have jekyll installed, you can go ahead and create a new jekyll app running the following command (replace “site-name” with the name of your choice):</p>
+
+<p><code class="highlighter-rouge">jekyll new site-name</code></p>
+
+<p>This should create a new directory with the same name as your app. Open up that directory on terminal, list the files in it, and you should see the following on your screen.</p>
+
+<p><img src="/resources/website-setup/jekyll-new.png" width="100%" /></p>
+
+<p>Then, using a text editor, open up the Gemfile and change this line <mark>`gem "minima", "~&gt; 2.0"`</mark> to <code class="highlighter-rouge">gem "jekyll-theme-clean-blog"</code>. What you’ve done here is change the theme from minima version equal to or greater than version 2.0 to jekyll-theme-clean-blog. Then run <code class="highlighter-rouge">bundle install</code> in your command line to pull in the dependencies for that new gem.</p>
+
+<p>You are then going to edit the _config.yml file and replace the current theme with <code class="highlighter-rouge">theme: jekyll-theme-clean-blog</code>. Finally, in your terminal, run <code class="highlighter-rouge">bundle exec jekyll serve</code>. You should see that you just started a server whose address is localhost:4000. On your browser, navigate to localhost:4000 and you should see your brand new blog!</p>
+
+<p><img src="/resources/website-setup/brand-new-blog.png" width="100%" /></p>
+
+<p>To Be Continued…</p>
+
+<p><strong>Hosting on Github</strong></p>
+
+<p><strong>How-To Links:</strong></p>
+<ol>
+  <li>How To Use Git: <a style="color:blue" href="https://lifehacker.com/5983680/how-the-heck-do-i-use-github">How The Heck Do I Use Git</a></li>
+  <li>Learning HTML + CSS: <a style="color:blue" href="https://www.udacity.com/course/intro-to-html-and-css--ud001">Udemy: Intro to HTML and CSS</a></li>
+  <li>How to use the command line on Mac OSX: <a style="color:blue" href="http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line">Intro to the Mac OSX Command Line</a></li>
+</ol>
+
+<p><strong>References:</strong></p>
+<ol>
+  <li><a style="color:blue" href="https://medium.com/thoughts-and-notes/tool-build-a-personal-website-using-jekyll-blog-framework-7fd49c43be42"> Build a Personal Website Using Jekyll Blog Framework </a></li>
+  <li><a style="color:blue" href="https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll"> Start Bootstrap: Clean Blog Github</a></li>
+</ol>
+
+
+      <hr>
+
+      <div class="clearfix">
+
+        
+        <a class="btn btn-primary float-left" href="/informational/2018/01/15/first-blog-post.html" data-toggle="tooltip" data-placement="top" title="First blog post!">&larr; Previous<span class="d-none d-md-inline"> Post</span></a>
+        
+        
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+    <!-- Footer -->
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <ul class="list-inline text-center">
+          
+          <li class="list-inline-item">
+            <a href="https://www.linkedin.com/in/seanschen1">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://github.com/seanschen">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="copyright text-muted">Copyright &copy;  2018</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <script src="/assets/vendor/jquery/jquery.min.js"></script>
+<script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/vendor/startbootstrap-clean-blog/js/clean-blog.min.js"></script>
+
+<script src="/assets/scripts.js"></script>
+
+
+
+
+  </body>
+
+</html>

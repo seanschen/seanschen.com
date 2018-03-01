@@ -1,18 +1,52 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-02-15T23:34:56-08:00</updated><id>http://localhost:4000/</id><title type="html">Sean Chen</title><subtitle>A personal blog to share about technology, food, travel, etc.</subtitle><entry><title type="html">Asia Trip 2017</title><link href="http://localhost:4000/travel/2018/02/15/asia-trip.html" rel="alternate" type="text/html" title="Asia Trip 2017" /><published>2018-02-15T10:46:21-08:00</published><updated>2018-02-15T10:46:21-08:00</updated><id>http://localhost:4000/travel/2018/02/15/asia-trip</id><content type="html" xml:base="http://localhost:4000/travel/2018/02/15/asia-trip.html">&lt;p&gt;I’ve never been the strongest writer, so I decided to give myself an easy topic to write about for my first blog post (that isn’t the intro post). This post will be about a two week trip I took in the spring of 2017 with my brother Kevin and my friend Tony through Southeast Asia.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-02-28T22:51:12-08:00</updated><id>http://localhost:4000/</id><title type="html">Sean Chen</title><subtitle>A personal blog to share about technology, food, travel, etc.</subtitle><entry><title type="html">Personal Blog Setup</title><link href="http://localhost:4000/tutorials/2018/01/28/blog-setup.html" rel="alternate" type="text/html" title="Personal Blog Setup" /><published>2018-01-28T18:33:52-08:00</published><updated>2018-01-28T18:33:52-08:00</updated><id>http://localhost:4000/tutorials/2018/01/28/blog-setup</id><content type="html" xml:base="http://localhost:4000/tutorials/2018/01/28/blog-setup.html">&lt;p&gt;Note: This blog post assumes basic knowledge of Github, HTML/CSS, and how to run UNIX commands using Terminal on a Mac. Miscellaneous links to learn about the assumed knowledge are listed below the blog.&lt;/p&gt;
 
-&lt;p&gt;First, some background on my motivation for taking the trip. When I graduated from Cal at the end of 2015, I knew that I wanted to do some traveling before I started working. I took a three week trip through four different countries in Europe and one in Africa (a story for another time) and loved backpacking so much that I promised myself that I would take some time each year to explore a new part of the world that I had never been before.&lt;/p&gt;
+&lt;p&gt;Every time that I would think about starting a blog, I would fall into the endless rabbit hole of deciding on which framework to use and how I wanted the blog to eventually look. Every time I searched for inspiration online, I would end up looking at templates and would waste so much time that I never actually created anything. This blog post is meant to help those that are in the same boat that I was in. Hopefully I can help you guys get a good start on a blog with a simple look that can be customized to your needs.&lt;/p&gt;
 
-&lt;p&gt;Even though I don’t mind traveling alone (it’s great way to force yourself to meet new people), I knew that I wanted to travel with Kevin at some point. I floated the idea of Southeast Asia to him and he said that both him and his roommate Tony had been wanting to go, so they were completely on board. At this point, Kevin was still living in Arlington, VA with Tony so we needed to plan out the logistics of the trip. I knew from my previous trip that my preferred method of planning trips was to pick the cities and the dates, get the flights for those cities, and then leave the nitty-gritty details of each city for when I got there. If there was something that I definitely wanted to do in a specific city, then I would book something in advance, but I liked the freedom of choosing what I would be doing, the day of.&lt;/p&gt;
+&lt;p&gt;To create your personal website, we are going to be using Github Pages, github’s website hosting platform, and Jekyll, a static site generator. We are also going to use a template that was created by Start Bootstrap to get a clean looking starter blog that you can customize.&lt;/p&gt;
 
-&lt;p&gt;After some discussion, this was our finalized itinerary:
-&lt;img src=&quot;/resources/asia-trip/trip-itinerary.jpg&quot; width=&quot;700&quot; /&gt;
-We were going to fly into Singapore and stay for one day. Then fly to Thailand, jumping between Phuket, Chiang Mai, and Bangkok. Finally, we would go to three more cities in Vietnam - Hanoi, Nha Trang, and Ho Chi Minh City. We wanted to see as many places as we could, so we were only spending 2 or 3 days max in each city. Some of the things we knew we wanted to do were a Thai cooking class, and a boat cruise in Ha Long Bay (near Hanoi) so we booked those in advance.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Creating the Jekyll Blog&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;Here’s the three of us in SF the day before we set off for the trip:&lt;/p&gt;
+&lt;p&gt;To start off, you want to make sure that you have the dependencies for jekyll installed (a simple google search should return how-tos for each):&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Ruby version 2.2.5 or above, including all development headers (ruby installation can be checked by running ruby -v, development headers can be checked on Ubuntu by running apt list –installed  ruby-dev)&lt;/li&gt;
+  &lt;li&gt;RubyGems (which you can check by running gem -v)&lt;/li&gt;
+  &lt;li&gt;GCC and Make (in case your system doesn’t have them installed, which you can check by running gcc -v,g++ -v and make -v in your system’s command line interface)&lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;p&gt;&lt;img src=&quot;/resources/asia-trip/start-sf.jpg&quot; width=&quot;700&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Next you want to install jekyll by running the following command on your command line:&lt;/p&gt;
 
-&lt;p&gt;To be continued…&lt;/p&gt;</content><author><name></name></author><summary type="html">I’ve never been the strongest writer, so I decided to give myself an easy topic to write about for my first blog post (that isn’t the intro post). This post will be about a two week trip I took in the spring of 2017 with my brother Kevin and my friend Tony through Southeast Asia.</summary></entry><entry><title type="html">First blog post!</title><link href="http://localhost:4000/informational/2018/02/13/first-blog-post.html" rel="alternate" type="text/html" title="First blog post!" /><published>2018-02-13T13:53:48-08:00</published><updated>2018-02-13T13:53:48-08:00</updated><id>http://localhost:4000/informational/2018/02/13/first-blog-post</id><content type="html" xml:base="http://localhost:4000/informational/2018/02/13/first-blog-post.html">&lt;p&gt;I’ve been wanting to start a blog for a while now, but have never gotten around to it. So I decided to stop being lazy and start today.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;gem install jekyll&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;This will pull in the necessary dependencies and extensions for jekyll. Once you have jekyll installed, you can go ahead and create a new jekyll app running the following command (replace “site-name” with the name of your choice):&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll new site-name&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;This should create a new directory with the same name as your app. Open up that directory on terminal, list the files in it, and you should see the following on your screen.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/resources/website-setup/jekyll-new.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Then, using a text editor, open up the Gemfile and change this line &lt;mark&gt;`gem &quot;minima&quot;, &quot;~&amp;gt; 2.0&quot;`&lt;/mark&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;gem &quot;jekyll-theme-clean-blog&quot;&lt;/code&gt;. What you’ve done here is change the theme from minima version equal to or greater than version 2.0 to jekyll-theme-clean-blog. Then run &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle install&lt;/code&gt; in your command line to pull in the dependencies for that new gem.&lt;/p&gt;
+
+&lt;p&gt;You are then going to edit the _config.yml file and replace the current theme with &lt;code class=&quot;highlighter-rouge&quot;&gt;theme: jekyll-theme-clean-blog&lt;/code&gt;. Finally, in your terminal, run &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle exec jekyll serve&lt;/code&gt;. You should see that you just started a server whose address is localhost:4000. On your browser, navigate to localhost:4000 and you should see your brand new blog!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/resources/website-setup/brand-new-blog.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;To Be Continued…&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Hosting on Github&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;How-To Links:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;How To Use Git: &lt;a style=&quot;color:blue&quot; href=&quot;https://lifehacker.com/5983680/how-the-heck-do-i-use-github&quot;&gt;How The Heck Do I Use Git&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Learning HTML + CSS: &lt;a style=&quot;color:blue&quot; href=&quot;https://www.udacity.com/course/intro-to-html-and-css--ud001&quot;&gt;Udemy: Intro to HTML and CSS&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;How to use the command line on Mac OSX: &lt;a style=&quot;color:blue&quot; href=&quot;http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line&quot;&gt;Intro to the Mac OSX Command Line&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;References:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a style=&quot;color:blue&quot; href=&quot;https://medium.com/thoughts-and-notes/tool-build-a-personal-website-using-jekyll-blog-framework-7fd49c43be42&quot;&gt; Build a Personal Website Using Jekyll Blog Framework &lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a style=&quot;color:blue&quot; href=&quot;https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll&quot;&gt; Start Bootstrap: Clean Blog Github&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">Note: This blog post assumes basic knowledge of Github, HTML/CSS, and how to run UNIX commands using Terminal on a Mac. Miscellaneous links to learn about the assumed knowledge are listed below the blog.</summary></entry><entry><title type="html">First blog post!</title><link href="http://localhost:4000/informational/2018/01/15/first-blog-post.html" rel="alternate" type="text/html" title="First blog post!" /><published>2018-01-15T13:53:48-08:00</published><updated>2018-01-15T13:53:48-08:00</updated><id>http://localhost:4000/informational/2018/01/15/first-blog-post</id><content type="html" xml:base="http://localhost:4000/informational/2018/01/15/first-blog-post.html">&lt;p&gt;I’ve been wanting to start a blog for a while now, but have never gotten around to it. So I decided to stop being lazy and start today.&lt;/p&gt;
 
 &lt;p&gt;This blog is going to be a combination of posts about tech that I’m currently learning about, recipes that I’ve attempted (with pictures :D), places that I’ve recently visited, as well as anything else that is occupying my time. My goal is to write one blog post every two weeks. Hopefully, I’m not all over the place with these blog posts and can both learn and teach through them.&lt;/p&gt;
 
